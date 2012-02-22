@@ -1,7 +1,7 @@
 #encoding: utf-8
 class HomeController < ApplicationController
   def index
-  	redirect_to :action => :site_map
+  	#redirect_to :action => :site_map
   end
 
   #It's a location tip, you can set lawyer => nil, and modify 'views/home/location.html.erb' to 'view/home/_location.html.erb'

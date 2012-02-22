@@ -1,107 +1,92 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 
-/* body { background: url(<%= asset_path 'bg_blue.png' %>) repeat-x top left fixed;} */
-
-/* #header {
-    background: #4d87c7 url(<%= asset_path('bg_blue.png') %>) repeat-x top left;
- } */
-
- /* This css file serves as a template for styling your kwicks.  Feel free to modify, but please make note of the comments - some of them are important. */
-
-/* defaults for all examples */
-.kwicks {
-	list-style: none;
-	position: relative;
-	margin: 0;
-	padding: 0;
-}
-.kwicks li{
-	display: block;
-	overflow: hidden;
-	padding: 0;
-	cursor: pointer;
-}
-
-/* example 1 */
-.kwicks li{
-	float: left;
-	width: 125px;
-	height: 100px;
-	margin-right: 5px;
-}
-
-.main_kwick a{
-	display: block;
-	height: 120px;
-	width: 100px;
-}
-
-#kwick1 { 
-	background-color: #53b388;
-	background-image: url('<%=asset_path("menu_1.gif")%>');
-}
-#kwick2 {
-	background-color: #5a69a9;
-	background-image: url('<%=asset_path("menu_2.gif")%>');
-}
-#kwick3 {
-	background-color: #c26468;
-	background-image: url('<%=asset_path("menu_1.gif")%>');
-}
-#kwick4 { 
-	background-color: #bf7cc7;
-	background-image: url('menu_2.gif');
-	margin-right: none;
-}
-#kwick5 { 
-	background-color: #bf7cc7;
-	background-image: url('menu_1.gif');
-	margin-right: none;
-}
-#kwick6 { 
-	background-color: #bf7cc7;
-	background-image: url('menu_2.gif');
-	margin-right: none;
-}
-#kwick7 { 
-	background-color: #bf7cc7;
-	background-image: url('menu_1.gif');
-	margin-right: none;
-}
+*{ margin:0; padding:0;}
+ul,li{ list-style:none;}
+img{ border:none;}
+body{ background:url(<%=asset_path "back0.jpg" %>); font-size:12px;}
+#wrapper{ width:996px; margin:0 auto;}
+.heard{ background:url(<%=asset_path "headerbg.jpg" %>) repeat-x; height:37px; line-height:37px;}
+.heard a{ text-decoration:none; color:#000;}
+.heard a:hover{ text-decoration:underline; color:#000;}
+.logobg{ background:url(<%=asset_path "top_back_02.jpg" %>) repeat-x; height:80px; padding-left:10px; overflow:hidden;}
+.logo{ float:left;}
+.tel{ float:left; margin-left:100px; line-height:24px; font-size:14px; color:#FFF; padding-top:20px;}
+.loright{ float:right; padding-right:40px; padding-top:10px;}
+.textbn{ line-height:20px; height:20px;}
+.loright a{ text-decoration:none; color:#fff;}
+.lef1,.lef2{ float:left;}
+.lef2{ margin-left:6px;}
+.menu{ background:url(<%=asset_path "tu_3.jpg" %>) repeat-x; height:65px; line-height:65px;}
+.menu li{ float:left;margin:0 8px; text-align:center;}
+.menu li a{ text-decoration:none; font-weight:bold; color:#FFF; font-size:14px;}
+.menu li a:hover{font-weight:bold; color:#FFF; background:url(<%=asset_path "current.gif" %>) no-repeat 0 -6px; width:67px; height:54px; display:block;}
+.current{ background:url(<%=asset_path "current.gif" %>) no-repeat 0 -6px; width:67px; height:54px; margin-top:15px;}
 
 
-.sub_kwicks{
-	display: block;
-	position: relative;
-	visibility: visible;
-	width: 100%;
-	margin-top: 80px;
-	list-style-type: none;
-	background-color: #fff;
-	float: left;
-	padding: 8px;
-	height: 35px;
-}
-.sub_kwicks li {
-	display: none;
-	width: 100%;
-	border: 1px solid #666;
-	height: 30px;
-	margin: 0px;
-	padding-top: 10px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-}
-.sub_kwicks li a {
-	font-family: "微软雅黑";
-	font-size: 16px;
-	text-decoration: none;
-	padding: 4px;
-	margin-top: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	margin-left: 10px;
-}
+
+.footer{ background:url(<%=asset_path "bottombg.jpg" %>) repeat-x; height:117px; padding-top:15px; overflow:hidden; width:995px;}
+.logobt{ background:url(<%=asset_path "logo2.jpg" %>); width:284px; height:90px; float:left; }
+.fotter2{ float:left; margin-left:60px; margin-top:20px; line-height:20px; color:#FFF;}
+.fotter2 a{ text-decoration:none; color:#FFF;}
+.fotter2 a:hover{ text-decoration:underline; color:#FFF;}
+
+
+/*************index*****/
+.content{ border:1px solid #000; width:990px; margin:0 auto; background:#F9E1B1; padding:2px; }
+.ct1{ border:1px solid #7C5B00; background:#F4D26E; padding:2px;}
+.ct2{ border:1px solid #CCAB68; background:#fff; padding:2px; overflow:hidden; height:1000px;}
+
+<!--图片切换css-->
+.container, .container *{margin:0; padding:0;} 
+
+.container{width:976px; height:348px; overflow:hidden;} 
+
+.slider{position:absolute;} 
+.slider li{ list-style:none;display:inline;} 
+.slider img{ width:976px; height:348px; display:block;} 
+.num{ position:absolute; right:4px; bottom:6px;} 
+.num li{ 
+    float: left; 
+    color: #FF7300; 
+    text-align: center; 
+    line-height: 10px; 
+    width: 10px; 
+    height: 10px; 
+    font-family: Arial; 
+    font-size: 12px; 
+    overflow: hidden; 
+	padding:3px;
+    margin: 0 2px; 
+    background-color: #fff; 
+} 
+.num li.on{ 
+    color: #fff; 
+    line-height: 10px; 
+    width: 10px; 
+    height: 10px; 
+    font-size: 12px; 
+    margin: 0 2px; 
+    border: 0; 
+    background-color: #FF7300; 
+    font-weight: bold; 
+} 
+
+<!---end-->
+
+.cont{ overflow:hidden; clear:both; }
+.left,.middle,.right{ float:left;}
+.middle{ margin-left:20px; border-left:1px solid #BDBDBD; width:471px; line-height:22px; padding-left:10px;}
+.left{ width:200px;}
+.left1{ margin-left:25px; margin-bottom:25px;}
+.left1 li{ margin:12px 0; text-align:center;}
+.left2{ margin-left:25px;margin-top:25px;}
+.left2 li{ margin:4px 0;}
+.left2 li a{ text-decoration:none; color:#333;}
+.left2 li a:hover{ text-decoration:underline; color:#333;}
+.right{ margin-left:15px; width:240px;}
+.right1{ width:240px;}
+.right1 li{ background:url(images/ico.jpg) no-repeat; padding-left:17px; height:16px; margin:8px 0; border-bottom:1px dotted #e9e9e9;}
+.right1 li a{ text-decoration:none; color:#333;}
+.right1 li a:hover{ text-decoration:underline; color:#333;}
+.right2{ margin-top:30px;}
+.right2 li{ border:1px solid #e9e9e9; padding:2px; width:163px; margin:8px 0;}
+.pist{ margin:10px 0;}

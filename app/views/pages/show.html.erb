@@ -2,6 +2,10 @@
 <% meta_keywords @page.meta_keywords %>
 <% meta_description @page.meta_description %>
 
+<% content_for :special_page do %>
+ <%= render :partial => "pages/#{@page.path_name}" %>
+<% end %>
+
 <div id="page">
   <%= simple_format @page.body %>
 </div>

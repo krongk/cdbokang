@@ -21,6 +21,40 @@
 </head> 
  
 <body> 
- <%=yield %>
+<div id="wrapper">
+<div class="heard"><div style=" text-align:right; padding-right:4px; line-height:37px; height:37px;"><a href="#">加入会员</a>|<a href="#">加入收藏</a>|<a href="#">联系我们</a></div></div>
+<div class="logobg"><div class="logo"><a href="#" title="成都博康生物药业公司"><img src="/assets/logo_up.jpg" /></a></div>
+<div class="tel"><p>招商加盟热线：028-88888888<bR />公司网址：www.chengdubokang.com</p></div>
+<div class="loright"><p><input type="text" class="textbn"  value="用户名"/><input name="" style=" margin-left:10px;" type="checkbox" value="" /><font color="#FFFFFF">记住</font><a href="#" style="margin-left:15px;">找回密码</a></p>
+<p style="overflow:hidden; margin-top:10px;"><input type="text" class="textbn lef1" value="......." /><input type="image" class="lef2" src="/assets/tu_8.gif" /><input type="image" class="lef2" src="/assets/tu_7.jpg" /></p>
+</div>
+</div>
+<div class="menu">
+<ul>
+<li class="current"><a href="/" title="首页">首页</a></li>
+<li><a href="/pages/about" title="关于我们">关于我们</a></li>
+<li><a href="/pages/news" title="企业动态">企业动态</a></li>
+<li><a href="/pages/ensure" title="招商加盟">招商加盟</a></li>
+<li><a href="/pages/product" title="产品介绍">产品介绍</a></li>
+<li><a href="/pages/contact" title="联系我们">联系我们</a></li>
+<li><a href="/pages/comment" title="雁过留声">雁过留声</a></li>
+</ul></div>
+
+<!---内容部分-->
+<%= yield :special_page %>
+<%= yield %>
+
+<!---end-->
+<!--底部-->
+<div class="footer">
+<div class="logobt"></div>
+<div class="fotter2"><p align="center"><a href="#" title="关于我们">关于我们</a> | <a href="#" title="觉见问题">觉见问题</a> | <a href="#" title="友情链接">友情链接</a> | <a href="#" title="招商加盟">招商加盟</a> | <a href="#" title="产品介绍">产品介绍</a> <br />
+版权所有2012 *****（www.chengdubokang.com)<Br>
+本网站设计由inruby(红宝石网络工作室）设计制作
+</p>
+
+</div>
+</div>
+</div>
 </body>
 </html>
