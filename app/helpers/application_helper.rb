@@ -9,4 +9,14 @@ module ApplicationHelper
   def meta_description(meta_description)
   	content_for(:meta_description){ meta_description}
   end
+
+  #set 'current' class to menu
+  def current_class(title)
+    if request.url =~ /\/#{title}/i
+        'current'
+    else
+        ''
+    end
+  end
+
 end

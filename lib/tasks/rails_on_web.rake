@@ -55,6 +55,7 @@ namespace :rails_on_web do
           :path_name => path_name.nil? ? menu[0] : "#{path_name}:#{menu[0]}",
           :position => position,
           :title => menu[1]['title'],
+          :body => menu[1]['title'],
           :menu_match => menu[1]['menu_match'],
           :meta_keywords => "#{menu[1]['title']} #{meta_keywords}",
           :meta_description => "#{menu[1]['title']}-#{meta_description}",

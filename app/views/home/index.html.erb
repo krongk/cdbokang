@@ -2,38 +2,24 @@
 <div class="ct1">
 <div class="ct2">
 <!--star-->
-<div class="container" id="idTransformView"> 
-<ul class="slider" id="idSlider"> 
-<li><img src="/assets/banner.jpg"/></li> 
-<li><img src="/assets/banner2.jpg"/></li> 
-<li><img src="/assets/banner.jpg"/></li> 
-<li><img src="/assets/banner2.jpg"/></li> 
-</ul> 
-<ul class="num" id="idNum"> 
-<li>1</li> 
-<li>2</li> 
-<li>3</li> 
-<li>4</li> 
-</ul> 
-</div>
+    <%= render :partial => 'layouts/slider' %>
 <!--end-->
 <div class="cont" style="margin-top:20px; overflow:hidden;">
 <div class="left">
 <div class="left1"><h3><img src="/assets/bar_red.png" /></h3>
 <ul>
-<li><img src="/assets/pic.jpg" /></li>
-<li><img src="/assets/pic2.jpg" /></li>
+<li><a href="/product_items/1"><img src="/assets/pic.jpg" /></a></li>
+<li><a href="/product_items/2"><img src="/assets/pic2.jpg" /></a></li>
 </ul>
 </div>
 <div class="left2"><h3><img src="/assets/bar_green.png" /></h3>
 <ul>
-<li><a href="#" title="健康咨询服务内容健康咨询服务">健康咨询服务内容健康咨询服务</a></li>
-<li><a href="#" title="健康咨询服务内容健康咨询服务">健康咨询服务内容健康咨询服务</a></li>
-<li><a href="#" title="健康咨询服务内容健康咨询服务">健康咨询服务内容健康咨询服务</a></li>
-<li><a href="#" title="健康咨询服务内容健康咨询服务">健康咨询服务内容健康咨询服务</a></li>
+<% NewsItem.recent(4, 5, false).each do |item| %>
+  <li><%= link_to item.title.truncate(18), news_item_path(item) %></li>
+<% end %>
 </ul>
 </div>
-<p style="margin-left:25px; margin-top:30px;"><img src="/assets/zxun.jpg" /></p>
+<p style="margin-left:25px; margin-top:30px;"><a href="/pages/comment"><img src="/assets/zxun.jpg" /></a></p>
 </div>
 <div class="middle">成都市博康生物药业有限公司，是一家成立于2003年6月，至今
 已有9个年头的保健品企业，我公司的保健产品主要是以鹿茸、灵芝、
@@ -44,28 +30,23 @@
 格科学管理、完善的销售服务和高效、灵活的运作方针，继续与新
 老朋友合作，坚持双赢原则，互惠互利。建立稳固的、密集的营销
 网络，为开拓公司的美好明天而携手共进！
-<p style="margin-top:15px;"><img src="/assets/banner2.jpg" /></p>
+<p style="margin-top:15px;"><img src="/assets/banner_0.jpg" /></p>
+
 </div>
 <div class="right">
 <div class="right1"><h3><img src="/assets/bar_red01.png" /></h3>
 <ul>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态 2011-12-12</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
-<li><a href="#" title="2012春节放假通知公司动态">2012春节放假通知公司动态</a></li>
+<% NewsItem.recent(4, 1, false).each do |item| %>
+  <li><%= link_to item.title.truncate(20), news_item_path(item) %></li>
+<% end %>
 </ul>
-<p align="right"><a href="#" title="更多">更多>></a></p>
+<p align="right"><a href="/news_cates/1" title="更多">更多>></a></p>
 </div>
 
 <div class="right2"><h3><img src="/assets/bar_Blue.png" /></h3>
 <ul class="pist">
-<li><img src="/assets/zhyh.jpg" />
-<p align="center">食品许可证</p>
+<li><img src="/assets/yyzz.jpg" />
+<p align="center">企业营业执照</p>
 </li>
 <li><img src="/assets/zhyh.jpg" />
 <p align="center">食品许可证</p>
