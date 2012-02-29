@@ -1,33 +1,49 @@
-<h1>Listing product_items</h1>
+<%#encoding: utf-8 %>
+<% title "产品列表" %>
 
-<table>
-  <tr>
-    <th>Product cate</th>
-    <th>Name</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>Image url</th>
-    <th>Is visible</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<style type="text/css">
+.about-middle{ margin-left:25px;overflow:hidden; float:left; width:870px;}
+.ableft{ float:left; width:79px; display:block; overflow:hidden;}
+.titable{ border-bottom:1px solid #60331F; position:relative; height:30px;}
+.titable h3{ color:#60331F; font-weight:bold; font-size:26px;}
+.index{ position:absolute; right:4px; top:5px; display:block;}
+.aboutpic{ margin-top:10px; overflow:hidden; float:left; margin-left:5px;}
+.aboutpic li a,.list1 li a{ text-decoration:none; color:#60331F;}
+.aboutpic li a:hover,.list1 li a:hover{ text-decoration:underline; color:#60331F;}
+.aboutpic li{ margin:8px 0;}
+.newslist{ float:left; margin-left:15px; margin-top:10px; background:url(images/jsbg.jpg) no-repeat; height:318px; padding:8px 8px 0 6px; line-height:22px; width:261px;}
+.textn{ height:24px; height:24px; float:left;}
+label{ float:left; width:60px; text-align:right;}
+.aboutpic li{ overflow:hidden; width:330px; float:left; margin:12px 10px;}
+.product{ border:1px solid #e9e9e9; padding:2px; width:330px;}
+</style>
 
-<% @product_items.each do |product_item| %>
-  <tr>
-    <td><%= product_item.product_cate %></td>
-    <td><%= product_item.name %></td>
-    <td><%= product_item.description %></td>
-    <td><%= product_item.price %></td>
-    <td><%= product_item.image_url %></td>
-    <td><%= product_item.is_visible %></td>
-    <td><%= link_to 'Show', product_item %></td>
-    <td><%= link_to 'Edit', edit_product_item_path(product_item) %></td>
-    <td><%= link_to 'Destroy', product_item, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
+<div class="content">
+<div class="ct1">
+<div class="ct2">
+<div class="cont" style="margin-top:20px; overflow:hidden; height:auto;">
+
+<div class="about-middle">
+<div class="titable"><h3>产品介绍</h3>
+  <span class="index"><a href="/">首页</a> > 产品介绍</span></div>
+</div>
+<div class="aboutpic">
+<ul>
+
+<% @product_items.each do |item| %>
+  <li>
+    <div class="product"><%= link_to image_tag(item.image_path, :width => "330px"), product_item_path(item) %></div>
+    <p align="center"><%= link_to item.title, product_item_path(item)%></p>
+  </li>
 <% end %>
-</table>
 
-<br />
+</ul>
+</div>
+</div>
 
-<%= link_to 'New Product item', new_product_item_path %>
+</div>
+
+
+ </div>
+</div>
+</div>

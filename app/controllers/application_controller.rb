@@ -1,7 +1,9 @@
 #encoding: utf-8
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :locate
+  include ApplicationHelper
+  #before_filter :locate
+  before_filter :load_site_info
 
   def locate
   	#ip = request.remote_id

@@ -1,7 +1,17 @@
 module ApplicationHelper
+  
+  def load_site_info
+    $sites = {}
+    Site.all.each do |item|
+      unless $sites.include?(item.name)
+        $sites[item.name.to_sym] = item.value
+      end
+    end
+  end
 
   def title(page_title)
-  	content_for(:title){ page_title}
+    title = $sites[:site_name] unless page_title.blank?
+  	content_for(:title){ title}
   end
   def meta_keywords(meta_keywords)
   	content_for(:meta_keywords){ meta_keywords}

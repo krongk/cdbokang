@@ -1,0 +1,20 @@
+---
+en:
+  active_record:
+    models:
+      merchant: Merchant
+    attributes:
+      merchant:
+        name: Name
+        email: Email
+        company: Company
+        address: Address
+        phone: Phone
+        fax: Fax
+        content: Content
+        is_verfied: Is verfied
+        note: Note
+    errors:
+      merchant: !!null 
+  helpers:
+    merchant: !!null 

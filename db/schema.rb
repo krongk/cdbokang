@@ -54,6 +54,16 @@ ActiveRecord::Schema.define(:version => 20111121165600003) do
 
   add_index "cities", ["region_id"], :name => "index_cities_on_region_id"
 
+  create_table "contacts", :force => true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.text     "content"
+    t.boolean  "is_verfied"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "districts", :force => true do |t|
     t.string  "name"
     t.string  "en_name"
@@ -61,6 +71,20 @@ ActiveRecord::Schema.define(:version => 20111121165600003) do
   end
 
   add_index "districts", ["city_id"], :name => "index_districts_on_city_id"
+
+  create_table "merchants", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "company"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "fax"
+    t.text     "content"
+    t.boolean  "is_verfied"
+    t.string   "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "news_cates", :force => true do |t|
     t.string "name"

@@ -1,0 +1,16 @@
+---
+en:
+  active_record:
+    models:
+      contact: Contact
+    attributes:
+      contact:
+        name: Name
+        phone: Phone
+        content: Content
+        is_verfied: Is verfied
+        note: Note
+    errors:
+      contact: !!null 
+  helpers:
+    contact: !!null 

@@ -1,5 +1,9 @@
 RailsOnWeb::Application.routes.draw do
 
+  resources :contacts
+
+  resources :merchants
+
   resources :shops
 
   resources :resource_items

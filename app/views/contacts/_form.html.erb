@@ -1,0 +1,47 @@
+<%# encoding: utf-8 %>
+<%#参考：http://www.hometexnet.com/jxs.aspx %>
+
+<script type="text/javascript">
+$(document).ready(function(){
+  //name require
+  alert("dsf");
+  $("#contact_name").focus(function(){
+    $("#contact_name").val('');
+  });
+
+  $("#contact_name").blur(function(){
+    if($("#contact_name").val() == ""){
+      $("#contact_name_tp").text("姓名不能为空");
+    }else{
+      $("#contact_name_tp").text("");
+    }
+  });
+  //password require 
+
+
+ });
+</script>
+
+<%= form_for(@contact) do |f| %>
+  <% if @contact.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+
+      <ul>
+      <% @contact.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<p><%= f.text_field :name, :class => 'textnn', :value => '您的姓名...'%>
+<span id="contact_name_tp"></span>
+</p>
+<p><%= f.text_field :phone, :class => 'textnn', :value => '您的联系方式...'%>
+<span id="contact_phone_tp"></span></p>
+<p> <%= f.text_area :content, :class => 'textnn2' %></p>
+<p align="right">
+<%= image_submit_tag("/assets/subit.jpg", :disabled => false, :class => "agree_disagree_button") %></p>
+
+<% end %>

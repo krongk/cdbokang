@@ -27,7 +27,7 @@
   <a onclick="SetHome(this,window.location)" style="cursor:hand">设为首页</a></span> |
   <a href="/pages/contact">联系我们</a></div></div>
 <div class="logobg"><div class="logo"><a href="#" title="成都博康生物药业公司"><img src="/assets/logo_up.jpg" /></a></div>
-<div class="tel"><p>招商加盟热线：18628126310<bR />公司网址：www.cdbokang.com</p></div>
+<div class="tel"><p>招商加盟热线：<%=$sites[:site_phone] %><br />公司网址：<%=$sites[:site_domain] %></p></div>
 <div class="loright">
  <form action="/admin">
   <p><input type="text" class="textbn"  value="用户名"/><input name="" style=" margin-left:10px;" type="checkbox" value="" /><font color="#FFFFFF">记住</font><a href="#" style="margin-left:15px;">找回密码</a></p>
@@ -41,23 +41,25 @@
 <li class="<%=current_class('index')%>"><a href="/" title="首页">首页</a></li>
 <li class="<%=current_class('about')%>"><a href="/pages/about" title="关于我们">关于我们</a></li>
 <li class="<%=current_class('news')%>"><a href="/pages/news" title="企业动态">企业动态</a></li>
-<li class="<%=current_class('ensure')%>"><a href="/pages/ensure" title="招商加盟">招商加盟</a></li>
-<li class="<%=current_class('product')%>"><a href="/pages/product" title="产品介绍">产品介绍</a></li>
-<li class="<%=current_class('contact')%>"><a href="/pages/contact" title="联系我们">联系我们</a></li>
-<li class="<%=current_class('comment')%>"><a href="/pages/comment" title="雁过留声">在线留言</a></li>
+<li class="<%=current_class('merchants')%>"><a href="/merchants/new" title="招商加盟">招商加盟</a></li>
+<li class="<%=current_class('product_items')%>"><a href="/product_items" title="产品介绍">产品介绍</a></li>
+<li class="<%=current_class('pages/contact')%>"><a href="/pages/contact" title="联系我们">联系我们</a></li>
+<li class="<%=current_class('contacts')%>"><a href="/contacts/new" title="在线留言">在线留言</a></li>
 </ul></div>
 
 <!---内容部分-->
-<%= yield :special_page %>
-<%= yield %>
+<div style="background: #fff; margin:0; padding: 0px;">
+  <%= yield :special_page %>
+  <%= yield %>
+</div>
 
 <!---end-->
 <!--底部-->
 <div class="footer">
 <div class="logobt"></div>
 <div class="fotter2"><p align="center"><a href="/pages/contact" title="关于我们">关于我们</a> | <a href="/pages/question" title="觉见问题">觉见问题</a> | <a href="/pages/friend_link" title="友情链接">友情链接</a> | <a href="/pages/ensure" title="招商加盟">招商加盟</a> | <a href="/product_cates" title="产品介绍">产品介绍</a> <br />
-版权所有 Copyright &copy;2012-2014 cdbokang.com，All Rights Reserved<Br>
-本网站由(<a href="http://www.inruby.com" target="_blank">红宝石网络工作室</a>）提供技术支持
+版权所有 Copyright &copy;2012-2014 <%=$sites[:site_domain] %>，All Rights Reserved<Br>
+<%=$sites[:site_name] %>, 本网站由(<a href="http://www.inruby.com" target="_blank">红宝石网络工作室</a>）提供技术支持
 </p>
 
 </div>

@@ -1,4 +1,5 @@
 ActiveAdmin.register Part do
+  menu false
   filter :title
 
   index do

@@ -1,0 +1,39 @@
+<h1>Listing merchants</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Company</th>
+    <th>Address</th>
+    <th>Phone</th>
+    <th>Fax</th>
+    <th>Content</th>
+    <th>Is verfied</th>
+    <th>Note</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @merchants.each do |merchant| %>
+  <tr>
+    <td><%= merchant.name %></td>
+    <td><%= merchant.email %></td>
+    <td><%= merchant.company %></td>
+    <td><%= merchant.address %></td>
+    <td><%= merchant.phone %></td>
+    <td><%= merchant.fax %></td>
+    <td><%= merchant.content %></td>
+    <td><%= merchant.is_verfied %></td>
+    <td><%= merchant.note %></td>
+    <td><%= link_to 'Show', merchant %></td>
+    <td><%= link_to 'Edit', edit_merchant_path(merchant) %></td>
+    <td><%= link_to 'Destroy', merchant, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Merchant', new_merchant_path %>

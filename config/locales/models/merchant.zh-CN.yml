@@ -1,0 +1,20 @@
+#encoding: utf-8
+zh-CN:
+  activerecord:
+    models:
+      merchant: 招商加盟
+    attributes:
+      merchant:
+        name: 姓名
+        email: Email
+        company: 单位
+        address: 地址
+        phone: 电话
+        fax: 传真
+        content: 内容
+        is_verfied: 是否审核
+        note: 备注
+    errors:
+      merchant: !!null 
+  helpers:
+    merchant: !!null 

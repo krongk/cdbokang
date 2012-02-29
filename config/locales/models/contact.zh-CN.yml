@@ -1,0 +1,16 @@
+#encoding: utf-8
+zh-CN:
+  activerecord:
+    models:
+      contact: 在线留言
+    attributes:
+      contact:
+        name: 姓名
+        phone: 电话
+        content: 内容
+        is_verfied: 是否审核
+        note: 备注
+    errors:
+      contact: !!null 
+  helpers:
+    contact: !!null 

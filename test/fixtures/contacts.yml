@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  phone: MyString
+  content: MyText
+  is_verfied: false
+  note: MyString
+
+two:
+  name: MyString
+  phone: MyString
+  content: MyText
+  is_verfied: false
+  note: MyString
