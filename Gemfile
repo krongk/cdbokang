@@ -9,12 +9,9 @@ gem 'rails', '3.1.0'
 #heroku
   gem 'pg'
 
-
-group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'sass-rails',   '~> 3.1.4'
+gem 'coffee-rails', '~> 3.1.1'
+gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails', '1.0.14'
 gem 'devise', '1.5.0'
