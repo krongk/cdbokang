@@ -1,6 +1,11 @@
 // Active Admin CSS Styles
-@import "active_admin/mixins";
-@import "active_admin/base";
+// xj: 0328, couse an error: 
+// : ActionView::Template::Error (stack level too deep
+// : cache: [GET /admin/login] miss
+// :   (in /app/app/assets/stylesheets/active_admin.css.scss)):
+// so ignore the two stype
+//@import "active_admin/mixins";
+//@import "active_admin/base";
 
 // To customize the Active Admin interfaces, add your
 // styles here:
