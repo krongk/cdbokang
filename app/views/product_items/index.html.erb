@@ -15,7 +15,7 @@
 .textn{ height:24px; height:24px; float:left;}
 label{ float:left; width:60px; text-align:right;}
 .aboutpic li{ overflow:hidden; width:330px; float:left; margin:12px 10px;}
-.product{ border:1px solid #e9e9e9; padding:2px; width:400px; height: 400px; display: block;}
+.product{ border:1px solid #e9e9e9; padding:2px; display: block;}
 </style>
 
 <div class="content">
@@ -30,12 +30,18 @@ label{ float:left; width:60px; text-align:right;}
 <div class="aboutpic">
 <ul>
 
-<% @product_items.each do |item| %>
-  <li>
-    <div class="product"><%= link_to image_tag(item.image_path, :width => "330px"), product_item_path(item) %></div>
-    <p align="center"><%= link_to item.title, product_item_path(item)%></p>
+<li>
+    <div class="product"><a href="/product_items/1"><img alt="1330525632" src="/assets/p-1.jpg" width="330px" /></a></div>
+    <p align="center"><a href="/product_items/1">鹿茸</a></p>
   </li>
-<% end %>
+  <li>
+    <div class="product"><a href="/product_items/2"><img alt="1330526095" src="/assets/p-2.jpg" width="330px" /></a></div>
+    <p align="center"><a href="/product_items/2">人参</a></p>
+  </li>
+  <li>
+    <div class="product"><a href="/product_items/3"><img alt="1330526131" src="/assets/p-3.jpg" width="330px" /></a></div>
+    <p align="center"><a href="/product_items/3">灵芝</a></p>
+  </li>
 
 </ul>
 </div>

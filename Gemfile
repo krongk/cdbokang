@@ -7,7 +7,7 @@ gem 'rails', '3.1.0'
 #office
 # gem 'mysql2', '0.3.11'
 #heroku
-  gem 'pg'
+ gem 'pg'
 
 gem 'sass-rails',   '~> 3.1.4'
 gem 'coffee-rails', '~> 3.1.1'

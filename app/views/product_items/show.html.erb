@@ -1,7 +1,5 @@
 <%#encoding: utf-8 %>
 <% title "产品介绍" %>
-<p id="notice"><%= notice %></p>
-
 <style type="text/css">
 .about-middle{ margin-left:25px;overflow:hidden; float:left; width:870px;}
 .ableft{ float:left; width:79px;}
@@ -25,22 +23,20 @@ label{ float:left; width:60px; text-align:right;}
 <div class="ct1">
 <div class="ct2">
 <div class="cont" style="margin-top:20px; overflow:hidden; height:auto;">
-<div class="ableft"><img src="images/leftico.jpg" /></div>
+<div class="ableft"><img src="/assets/leftico.jpg" /></div>
 <div class="about-middle">
 <div class="titable"><h3>产品介绍</h3>
   <span class="index"><a href="/">首页</a> > 产品介绍</span></div>
 </div>
 <div class="aboutpic">
-  <%= image_tag(@product_item.image_path), :width => '340px' %>
-<h3 class="title">[[<%= @product_item.title %>]]</h3>
+  <%= image_tag(@product_item.image_path, :width => '340px') %>
+<h3 class="title">[<%= @product_item.title %>]</h3>
 </div>
 <div class="aboutpic2">
-     <%= @product_item.description %>
+     <%= @product_item.description.html_safe %>
 </div>
 </div>
 
 </div>
  </div>
 </div>
-</div>
-
