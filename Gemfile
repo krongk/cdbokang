@@ -3,11 +3,11 @@ source 'http://rubygems.org'
 gem 'rails', '3.1.0'
 
 #home, omero
-# gem 'mysql2', '0.3.7'
+ gem 'mysql2', '0.3.7'
 #office
 # gem 'mysql2', '0.3.11'
 #heroku
- gem 'pg'
+#  gem 'pg'
 
 gem 'sass-rails',   '~> 3.1.4'
 gem 'coffee-rails', '~> 3.1.1'
@@ -41,7 +41,7 @@ gem 'activeadmin', '0.3.4'
 gem "meta_search",    '>= 1.1.0.pre'
 
 #fix bug:  Could not find a JavaScript runtime -- just on linux system
- gem 'therubyracer'
+gem 'therubyracer'
 
 #===WYSIWYG Editor
 gem 'tinymce-rails', '3.4.7'
