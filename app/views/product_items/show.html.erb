@@ -35,7 +35,7 @@ label{ float:left; width:60px; text-align:right;}
 <h3 class="title">[[<%= @product_item.title %>]]</h3>
 </div>
 <div class="aboutpic2">
-     <%= @product_item.description %>
+     <%= @product_item.description.html_safe unless @product_item.description.blank?  %>
 </div>
 </div>
 
