@@ -12,11 +12,11 @@
   <% end %>
 
 <ul>
-<li><label>姓 名:</label> <%= f.text_field :name, :class=> 'textn', :size => 18 %><span>你的真实姓名，请使用中文</span></li>
+<li><label>姓 名:</label> <%= f.text_field :name, :class=> 'textn', :size => 18 %>*<span>你的真实姓名，请使用中文</span></li>
 <li><label>E-mail:</label><%= f.text_field :email, :class=> 'textn', :size => 18 %><span>请正确填写电子邮箱，以便给你发送相关信息</span></li>
 <li><label>单 位:</label> <%= f.text_field :company, :class=> 'textn', :size => 18 %><span>地址是与你联系的重要方式,以保证资料邮寄</span></li>
 <li><label>地 址:</label> <%= f.text_field :address, :class=> 'textn', :size => 18 %><span>地址是与你联系的重要方式,以保证资料邮寄</span></li>
-<li><label>电 话:</label><%= f.text_field :phone, :class=> 'textn', :size => 18 %><span>电话是与你联系的重要方式,请正确填写</span></li>
+<li><label>电 话:</label><%= f.text_field :phone, :class=> 'textn', :size => 18 %>*<span>电话是与你联系的重要方式,请正确填写</span></li>
 <li><label>传 真:</label> <%= f.text_field :fax, :class=> 'textn', :size => 18 %></li>
 <li><label>内 容：</label> <%= f.text_area :content, :class=> 'textnn', :size => 18 %></li>
 <li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.submit "  提交  ", :size => 12, :height => 20%></li>

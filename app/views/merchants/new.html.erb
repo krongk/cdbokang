@@ -53,6 +53,11 @@ label{ float:left; width:60px; text-align:right;}
 <span class="index"><a href="/">首页</a> > 招商加盟</span>
 </div>
 <div class="aboutpic">
+
+<% if flash[:notice] %>
+  <p class="note"> <%= flash[:notice] %></p>
+<% end %>
+
 <%= render 'form' %>
 </div>
 <div class="aboutpic2">

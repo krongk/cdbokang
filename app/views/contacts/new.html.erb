@@ -23,6 +23,11 @@
 <div class="title">在线留言</div>
 <span class="title22"><a href="/">首页</a> > 在线留言</span>
 <div class="map">
+
+<% if flash[:notice] %>
+  <p class="note"> <%= flash[:notice] %></p>
+<% end %>
+
 <%= render 'form' %>
 </div></div>
 
