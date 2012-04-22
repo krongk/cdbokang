@@ -1,11 +1,51 @@
 <% title @page.title %>
 <% meta_keywords @page.meta_keywords %>
 <% meta_description @page.meta_description %>
+<style type="text/css">
+.about-middle{ margin-left:25px;overflow:hidden; float:left; width:870px;}
+.ableft{ float:left; width:79px;}
+.titable{ border-bottom:1px solid #60331F; position:relative; height:30px;}
+.titable h3{ color:#60331F; font-weight:bold; font-size:26px;}
+.index{ position:absolute; right:4px; top:5px; display:block;}
+.aboutpic{ float: left; margin-top:10px; overflow:hidden;}
+.aboutpic p{ float:left;}
+.aboutzi{ margin-left:10px; width:300px; line-height:22px;}
+.fenlei{ float:left; margin-left:10px; width:210px;}
+.fenlei li{ background:#8FD0E2; height:25px; line-height:25px; font-size:14px; color:#fff; margin:4px 0; text-indent:4px;}
+.titab{ margin-top:15px;}
+.neilist{ line-height:22px;}
+.neilist a{ text-decoration:none; color:#333;}
+.neilist a:hover{ text-decoration:underline;}
+.news_body{line-height: 25px;}
+</style>
 
-<% content_for :special_page do %>
- <%= render :partial => "pages/#{@page.path_name}" %>
+
+
+<% if @page.position == 1 %>
+  <% content_for :special_page do %>
+   <%= render :partial => "pages/#{@page.path_name}" %>
+  <% end %>
+<% else %>
+  <div class="content">
+  <div class="ct1">
+  <div class="ct2">
+  <!--star-->
+      <%= render :partial => 'layouts/slider' %>
+  <!--end-->
+  <div class="cont" style="margin-top:20px; overflow:hidden; height:auto;">
+      <div class="ableft"><img src="/assets/leftico.jpg" /></div>
+      <div class="about-middle">
+          <div class="titable">
+            <h3><%= @page.title %></h3>
+            <span class="index"><a href="/">首页</a> > 成都博康</span></div>
+            <br/>
+            <div class="news_body">
+              <%= sanitize @page.body.gsub(/\n/, "<br/>") %>
+            </div>
+      </div>
+  </div>
+
+  </div>
+  </div>
+  </div>
 <% end %>
-
-<div id="page">
-  <%# simple_format @page.body %>
-</div>

@@ -11,4 +11,33 @@
     rails_on_web:init_all_data
     rails_on_web:generate_all_page
   5. rails server
+
+=== Deployed on Heroku
+>heroku create
+>heroku login
+>git push heroku master
+  !告知无权限
+  在heroku网站上修改该app， 添加email: kenrome@163.com
+ > add 'pg' gem on Gemfile
+ > bundle install
+ > git commit . -m "add pg gem"
+ > git push heroku master
+ > heroku run rake db:migrate
+ > heroku db:push
+ > heroku run rake assets:precompile
+   !Error: Permission denied - /app/public/assets
+   解决办法： 因为heroku不支持写操作，所以需要在本地编译好以后将文件上传到heroku
+   注意：修改config/environments/production.rb
+      config.assets.compile = true
+    在.gitignore中去掉pubic/assets
+    
+>重命名heroku app
+1. 在heroku网站上修改该app名称
+2. 在本地该项目下运行：
+    $ git remote rm heroku
+    $ git remote add heroku git@heroku.com:newname.git
    
+C:\Sites\cdbokang>heroku create
+Creating sharp-robot-4853... done, stack is bamboo-mri-1.9.2
+http://sharp-robot-4853.heroku.com/ | git@heroku.com:sharp-robot-4853.git
+Git remote heroku added

@@ -1,3 +1,4 @@
+<%#encoding: utf-8 %>
 <!DOCTYPE html> 
 <html> 
 <head>
@@ -11,16 +12,23 @@
   <meta name="description" content="<%= yield(:meta_description)%>" />
     
   <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <%#= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
+ <script src="/assets/jquery-last.js"></script>
+  <script src="/assets/jquery.slider.js"></script>
+  <script type="text/javascript" src="/assets/jquery.validate.js"></script>
   <script type="text/javascript">
+    $(document).ready(function(){
+      $('#idTransformView').sliders({ delay: 2500, speed: 500 });
 
+      $("#new_merchant").validate();
+    });
   </script>
-
 </head> 
  
 <body> 
+
 <div id="wrapper">
 <div class="heard"><div style=" text-align:right; padding-right:4px; line-height:37px; height:37px;">
   <a onclick="AddFavorite(window.location,document.title)" style="cursor:hand">加入收藏</a> | 
@@ -57,9 +65,9 @@
 <!--底部-->
 <div class="footer">
 <div class="logobt"></div>
-<div class="fotter2"><p align="center"><a href="/pages/contact" title="关于我们">关于我们</a> | <a href="/pages/question" title="觉见问题">觉见问题</a> | <a href="/pages/friend_link" title="友情链接">友情链接</a> | <a href="/pages/ensure" title="招商加盟">招商加盟</a> | <a href="/product_cates" title="产品介绍">产品介绍</a> <br />
-版权所有 Copyright &copy;2012-2014 <%=$sites[:site_domain] %>，All Rights Reserved<Br>
-<%=$sites[:site_name] %>, 本网站由(<a href="http://www.inruby.com" target="_blank">红宝石网络工作室</a>）提供技术支持
+<div class="fotter2"><p align="center"><a href="/pages/contact" title="关于我们">关于我们</a> | <a href="/pages/news" title="公司动态">公司动态</a> | <a href="/merchants/new" title="招商加盟">招商加盟</a> | <a href="/product_items" title="产品介绍">产品介绍</a> <br />
+版权所有 Copyright 2012-2014 <%=$sites[:site_domain] %>，All Rights Reserved<Br>
+<%=$sites[:site_name] %>, 本网站由(<a href="http://www.inruby.com" target="_blank">红宝石网络工作室</a>）提供技术支持 
 </p>
 
 </div>

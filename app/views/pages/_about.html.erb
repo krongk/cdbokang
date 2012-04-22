@@ -7,7 +7,7 @@
 .aboutpic{ float: left; margin-top:10px; overflow:hidden;}
 .aboutpic p{ float:left;}
 .aboutzi{ margin-left:10px; width:300px; line-height:22px;}
-.fenlei{ float:left; margin-left:10px; width:210px;}
+.fenlei{ float:right; margin-left:10px; width:210px;}
 .fenlei li{ background:#8FD0E2; height:25px; line-height:25px; font-size:14px; color:#fff; margin:4px 0; text-indent:4px;}
 .titab{ margin-top:15px;}
 .neilist{ line-height:22px;}
@@ -26,27 +26,32 @@
     <div class="about-middle">
         <div class="titable"><h3>成都博康</h3><span class="index"><a href="/">首页</a> > 成都博康</span></div>
         <div class="aboutpic">
+          <table><tr><td>
             <p style="width:332px;"><img src="/assets/picno1.jpg" /></p>
+            </td><td>
             <p class="aboutzi">
-                <%= @page.body %>
+                <%= @page.body.html_safe %>
             </p>
-        <div class="fenlei">
-            <ul>
-            <li>关于成都博康</li>
-            <li>企业荣誉</li>
-            <li>领导致辞</li>
-            </ul>
-            <h3 class="titab">相关内容</h3>
-            <dl class="neilist">
-            <% NewsItem.recent(4, 4, false).each do |item| %>
-              <dt><%= link_to ">> #{item.title.truncate(16)}", news_item_path(item) %></dt>
-            <% end %>
-            </dl>
-
+            </td><td>
+            <div class="fenlei">
+                <ul>
+                <li><a href="/pages/1" target="_blank">关于成都博康</a></li>
+                <li><a href="/pages/3" target="_blank">企业荣誉</a></li>
+                <li><a href="/pages/4" target="_blank">领导致辞</a></li>
+                </ul>
+                <h3 class="titab">相关内容</h3>
+                <dl class="neilist">
+                <% NewsItem.recent(4, 4, false).each do |item| %>
+                  <dt><%= link_to ">> #{item.title.truncate(16)}", news_item_path(item) %></dt>
+                <% end %>
+                </dl>
+            </div>
+            </td></tr></table>
         </div>
+            
+       
     </div>
 </div>
-
 </div>
 </div>
 </div>

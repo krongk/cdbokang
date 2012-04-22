@@ -26,13 +26,10 @@ body{ background:url(<%=asset_path "back0.jpg" %>); font-size:12px;}
 .fotter2 a{ text-decoration:none; color:#FFF;}
 .fotter2 a:hover{ text-decoration:underline; color:#FFF;}
 
-
-/*************index*****/
 .content{ border:1px solid #000; width:990px; margin:0 auto; background:#F9E1B1; padding:2px; }
 .ct1{ border:1px solid #7C5B00; background:#F4D26E; padding:2px;}
 .ct2{ border:1px solid #CCAB68; background:#fff; padding:2px; overflow:hidden;}
 
-/***********img slider css-**/
 .container, .container *{margin:0; padding:0;} 
 
 .container{width:976px; height:348px; overflow:hidden;} 
@@ -66,9 +63,6 @@ body{ background:url(<%=asset_path "back0.jpg" %>); font-size:12px;}
     background-color: #FF7300; 
     font-weight: bold; 
 } 
-
-/***********img slider end -**/
-
 .cont{ overflow:hidden; clear:both; }
 .left,.middle,.right{ float:left;}
 .middle{ margin-left:20px; border-left:1px solid #BDBDBD; width:471px; line-height:22px; padding-left:10px;}
@@ -81,7 +75,7 @@ body{ background:url(<%=asset_path "back0.jpg" %>); font-size:12px;}
 .left2 li a:hover{ text-decoration:underline; color:#333;}
 .right{ margin-left:15px; width:240px;}
 .right1{ width:240px;}
-.right1 li{ background:url(images/ico.jpg) no-repeat; padding-left:17px; height:16px; margin:8px 0; border-bottom:1px dotted #e9e9e9;}
+.right1 li{ background:url(<%=asset_path "ico.jpg" %>) no-repeat; padding-left:17px; height:16px; margin:8px 0; border-bottom:1px dotted #e9e9e9;}
 .right1 li a{ text-decoration:none; color:#333;}
 .right1 li a:hover{ text-decoration:underline; color:#333;}
 .right2{ margin-top:30px;}
@@ -91,12 +85,17 @@ body{ background:url(<%=asset_path "back0.jpg" %>); font-size:12px;}
 .highlight { color:#c30; }
 .dimmed { color:#888; }
 
-.info { background:#f8f8f8; color:#666; padding:10px; margin-bottom:0.5em; font-size:91.7%; }
 
+.info { background:#f8f8f8; color:#666; padding:10px; margin-bottom:0.5em; font-size:91.7%; }
 #notice { background:#efe; color:#040; border:2px #484 solid; padding:10px; margin-bottom:1em; }
 .important { background:#ffe; color:#440; border:2px #884 solid; padding:10px; margin-bottom:1em; }
 .warning { background:#fee; color:#400; border:2px #844 solid; padding:10px; margin-bottom:1em; }
-
 .float_left { float:left; display:inline; margin-right:1em; margin-bottom:0.15em; }
 .float_right { float:right; display:inline; margin-left:1em; margin-bottom:0.15em; }
 .center { display:block; text-align:center; margin:0.5em auto; }
+
+label { width: 10em; float: left; }
+label.error { color: red; padding-left: .5em; vertical-align: top; }
+p { clear: both; }
+.submit { margin-left: 12em; }
+em { font-weight: bold; padding-right: 1em; vertical-align: top; }

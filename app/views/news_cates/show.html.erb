@@ -1,10 +1,44 @@
-<p id="notice"><%= notice %></p>
+<% title @news_cate.name || '成都博康药业' %>
+<style type="text/css">
+.about-middle{ margin-left:25px;overflow:hidden; float:left; width:870px;}
+.ableft{ float:left; width:79px;}
+.titable{ border-bottom:1px solid #60331F; position:relative; height:30px;}
+.titable h3{ color:#60331F; font-weight:bold; font-size:26px;}
+.index{ position:absolute; right:4px; top:5px; display:block;}
+.aboutpic{ float: left; margin-top:10px; overflow:hidden;}
+.aboutpic p{ float:left;}
+.aboutzi{ margin-left:10px; width:300px; line-height:22px;}
+.fenlei{ float:left; margin-left:10px; width:210px;}
+.fenlei li{ background:#8FD0E2; height:25px; line-height:25px; font-size:14px; color:#fff; margin:4px 0; text-indent:4px;}
+.titab{ margin-top:15px;}
+.neilist{ line-height:22px;}
+.neilist a{ text-decoration:none; color:#333;}
+.neilist a:hover{ text-decoration:underline;}
+.news_body{line-height: 25px;}
+</style>
 
-<p>
-  <b>Name:</b>
-  <%= @news_cate.name %>
-</p>
+<div class="content">
+<div class="ct1">
+<div class="ct2">
+<!--star-->
+    <%= render :partial => 'layouts/slider' %>
+<!--end-->
+<div class="cont" style="margin-top:20px; overflow:hidden; height:auto;">
+    <div class="ableft"><img src="/assets/leftico.jpg" /></div>
+    <div class="about-middle">
+        <div class="titable">
+          <h3><%= @news_cate.name %></h3>
+          <span class="index"><a href="/">首页</a> >  <%= @news_cate.name %></span></div>
+          <br/>
+          <div class="news_body"><ul>
+             <% @news_cate.news_items.limit(10).each do |item|%>
+               <li>&nbsp;>>&nbsp;&nbsp;<%= link_to item.title, news_item_path(item) %></li>
+              </ul>
+              <% end %>
+          </div>
+    </div>
+</div>
 
-
-<%= link_to 'Edit', edit_news_cate_path(@news_cate) %> |
-<%= link_to 'Back', news_cates_path %>
+</div>
+</div>
+</div>

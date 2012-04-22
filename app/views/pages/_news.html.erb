@@ -35,7 +35,6 @@
 <div class="aboutpic">
 <p style="width:332px; float:left;"><img src="/assets/picno1.jpg" /></p>
 <div class="aboutzi">
-<h3 style="margin-bottom:10px;"><img src="/assets/bar_red01.png" /></h3>
 <ul>
 <% NewsItem.recent(8, 1, false).each do |item| %>
   <li><%= link_to item.title.truncate(30), news_item_path(item) %></li>

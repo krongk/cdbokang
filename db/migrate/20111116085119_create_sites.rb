@@ -1,6 +1,6 @@
 class CreateSites < ActiveRecord::Migration
   def change
-    create_table :sites,:options=>'charset=utf8'  do |t|
+    create_table :sites  do |t|
       t.string :name
       t.string :value
     end

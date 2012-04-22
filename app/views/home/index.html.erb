@@ -37,7 +37,7 @@
 
 </div>
 <div class="right">
-<div class="right1"><h3><img src="/assets/bar_red01.png" /></h3>
+<div class="right1"><h3><a href="/news_cates/1" target="_blank"><img src="/assets/bar_red01.png" /></a></h3>
 <ul>
 <% NewsItem.recent(4, 1, false).each do |item| %>
   <li><%= link_to item.title.truncate(20), news_item_path(item) %></li>
