@@ -8,7 +8,7 @@
 //= require jquery_ujs
 //= require_tree .
 //= require tinymce
-//= require lyou
+
 
 //添加到收藏
  function AddFavorite(sURL, sTitle)
